@@ -8,9 +8,10 @@ from time import strftime, localtime
 import cv2
 import argparse
 
-from datasets import VOCDataset
-from nets import vgg
-from utils import crf, losses
+from deepLab.DeepLab_V1_PyTorch.datasets import VOCDataset
+from deepLab.DeepLab_V1_PyTorch.nets import vgg
+
+from deepLab.DeepLab_V1_PyTorch.utils import crf, losses
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 device_ids = [0]
